@@ -1,1 +1,22 @@
 # k8s-opsdk-core-types
+
+Admission Webhook example, using [`operator-sdk`](https://github.com/operator-framework/operator-sdk).
+
+This is to demonstrate a working example of using the `operator-sdk` to manage
+the lifecycle of an operator that is implementing a core type,
+or maybe a type managed by another repository.
+
+## Usage
+
+Each commit logs the purpose and relevant commands.
+
+```shell
+git log \
+  --date=format:'%a %Y-%m-%d %k:%M' \
+  --format='%n%ad %an <%ae> %h%d%n%n %s%n%w(0,2,2)%+b' \
+  --compact-summary
+```
+
+## To Do
+
+- [x] Initialize with `operator-sdk`
