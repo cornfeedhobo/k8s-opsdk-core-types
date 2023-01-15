@@ -22,3 +22,5 @@ git log \
 - [x] Initialize with `operator-sdk`
 
 - [x] Scaffold a core type
+
+- [x] Make sure kustomize can render manifests
