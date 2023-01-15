@@ -28,3 +28,5 @@ git log \
 - [x] Remove all the temporary API code, and get tests working to validate
 
 - [x] Add some more core types and add some corresponding tests
+
+- [x] Add helm chart, created from the kustomize output
