@@ -6,4 +6,17 @@ plugins:
   scorecard.sdk.operatorframework.io/v2: {}
 projectName: core-types-operator
 repo: github.com/cornfeedhobo/k8s-opsdk-core-types
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: core-types-operator.example.com
+  group: apps
+  kind: StatefulSet
+  path: github.com/cornfeedhobo/k8s-opsdk-core-types/api/v1
+  version: v1
+  webhooks:
+    defaulting: true
+    webhookVersion: v1
 version: "3"

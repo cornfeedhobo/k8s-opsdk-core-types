@@ -20,3 +20,5 @@ git log \
 ## To Do
 
 - [x] Initialize with `operator-sdk`
+
+- [x] Scaffold a core type
