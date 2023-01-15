@@ -30,3 +30,9 @@ git log \
 - [x] Add some more core types and add some corresponding tests
 
 - [x] Add helm chart, created from the kustomize output
+
+- [ ] Add auth support for the metrics endpoint
+
+- [ ] Add support for leader election
+
+- [ ] Add instructions for testing without cert-manager
