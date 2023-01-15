@@ -11,12 +11,12 @@ webhooks:
     service:
       name: webhook-service
       namespace: system
-      path: /mutate-apps-core-types-operator-example-com-v1-statefulset
+      path: /mutate-v1-statefulset
   failurePolicy: Fail
   name: mstatefulset.kb.io
   rules:
   - apiGroups:
-    - apps.core-types-operator.example.com
+    - apps
     apiVersions:
     - v1
     operations:

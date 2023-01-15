@@ -24,3 +24,5 @@ git log \
 - [x] Scaffold a core type
 
 - [x] Make sure kustomize can render manifests
+
+- [x] Remove all the temporary API code, and get tests working to validate
