@@ -26,3 +26,5 @@ git log \
 - [x] Make sure kustomize can render manifests
 
 - [x] Remove all the temporary API code, and get tests working to validate
+
+- [x] Add some more core types and add some corresponding tests

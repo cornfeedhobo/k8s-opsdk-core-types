@@ -96,6 +96,8 @@ var _ = BeforeSuite(func() {
 	})
 	Expect(err).NotTo(HaveOccurred())
 
+	RegisterDeploymentMutatorWebhook(mgr)
+	RegisterJobMutatorWebhook(mgr)
 	RegisterStatefulSetMutatorWebhook(mgr)
 
 	//+kubebuilder:scaffold:webhook

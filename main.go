@@ -90,6 +90,8 @@ func main() {
 		os.Exit(1)
 	}
 
+	apiv1.RegisterDeploymentMutatorWebhook(mgr)
+	apiv1.RegisterJobMutatorWebhook(mgr)
 	apiv1.RegisterStatefulSetMutatorWebhook(mgr)
 
 	//+kubebuilder:scaffold:builder

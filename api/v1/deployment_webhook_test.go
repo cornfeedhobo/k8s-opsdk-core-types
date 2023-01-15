@@ -12,17 +12,17 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 )
 
-var _ = Describe("StatefulSet", func() {
+var _ = Describe("Deployment", func() {
 	It("maybe", func() {
-		nn := types.NamespacedName{Namespace: "unittest", Name: "statefulset"}
+		nn := types.NamespacedName{Namespace: "unittest", Name: "deployment"}
 
-		orig := &appsv1.StatefulSet{
+		orig := &appsv1.Deployment{
 			ObjectMeta: metav1.ObjectMeta{
 				Name:      nn.Name,
 				Namespace: nn.Namespace,
 				Labels:    map[string]string{"app": "unittest"},
 			},
-			Spec: appsv1.StatefulSetSpec{
+			Spec: appsv1.DeploymentSpec{
 				Selector: &metav1.LabelSelector{
 					MatchLabels: map[string]string{"app": "unittest"},
 				},
@@ -44,7 +44,7 @@ var _ = Describe("StatefulSet", func() {
 		err := k8sClient.Create(context.TODO(), orig)
 		Expect(err).NotTo(HaveOccurred())
 
-		new := &appsv1.StatefulSet{}
+		new := &appsv1.Deployment{}
 		Eventually(func(g Gomega) {
 			err := k8sClient.Get(context.TODO(), nn, new)
 			Expect(err).NotTo(HaveOccurred())

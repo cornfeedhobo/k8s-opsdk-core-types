@@ -11,6 +11,46 @@ webhooks:
     service:
       name: webhook-service
       namespace: system
+      path: /mutate-v1-deployment
+  failurePolicy: Fail
+  name: mdeployment.kb.io
+  rules:
+  - apiGroups:
+    - apps
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - deployments
+  sideEffects: None
+- admissionReviewVersions:
+  - v1
+  clientConfig:
+    service:
+      name: webhook-service
+      namespace: system
+      path: /mutate-v1-job
+  failurePolicy: Fail
+  name: mjob.kb.io
+  rules:
+  - apiGroups:
+    - batch
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - jobs
+  sideEffects: None
+- admissionReviewVersions:
+  - v1
+  clientConfig:
+    service:
+      name: webhook-service
+      namespace: system
       path: /mutate-v1-statefulset
   failurePolicy: Fail
   name: mstatefulset.kb.io
